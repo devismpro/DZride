@@ -41,3 +41,12 @@ auth.onAuthStateChanged(user => {
     console.log("User is signed out");
   }
 });
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log("User is signed in:", user);
+  } else {
+    console.log("User is signed out");
+    window.location.href = "home.html"; // أو رابط صفحة تسجيل الدخول
+  }
+});
